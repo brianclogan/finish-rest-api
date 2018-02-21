@@ -36,12 +36,12 @@ File: `class-wp-rest-plugins-controller.php`
 
 | Endpoint | Method | Function | Result |
 |--|--|--|-|
-| `api/v1/plugins` | `GET` | `get_plugins()` | `WP_REST_Response|WP_Error` |
-| `api/v1/plugins` | `POST` | `install_plugins()` | `WP_REST_Response|WP_Error` |
-| `api/v1/plugins/{slug}` | `GET` | `get_plugin()` | `WP_REST_Response|WP_Error` |
-| `api/v1/plugins/activate` | `POST` | `activate_plugin()` | `WP_REST_Response|WP_Error` |
-| `api/v1/plugins/deactivate` | `POST` | `deactivate_plugin()` | `WP_REST_Response|WP_Error` |
-| `api/v1/plugins/delete` | `DELETE` | `delete_plugin()` | `WP_REST_Response|WP_Error` |
+| `api/v1/plugins` | `GET` | `get_plugins()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/plugins` | `POST` | `install_plugins()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/plugins/{slug}` | `GET` | `get_plugin()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/plugins/activate` | `POST` | `activate_plugin()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/plugins/deactivate` | `POST` | `deactivate_plugin()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/plugins/delete` | `DELETE` | `delete_plugin()` | `WP_REST_Response\|WP_Error` |
 
 
 ____
