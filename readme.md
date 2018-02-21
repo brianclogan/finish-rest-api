@@ -105,7 +105,7 @@ Response:
     "data": [
         {
             "file": "akismet/akismet.php",
-            "slug": "/",
+            "slug": "akismet",
             "name": "Akismet Anti-Spam",
             "plugin_uri": "https://akismet.com/",
             "version": "4.0.3",
@@ -120,7 +120,7 @@ Response:
         },
         {
             "file": "finish-rest-api/finish-rest-api.php",
-            "slug": "/",
+            "slug": "finish-rest-api",
             "name": "Finish Rest API",
             "plugin_uri": "https://twitter.com/darkgoldblade",
             "version": "1.0.0",
