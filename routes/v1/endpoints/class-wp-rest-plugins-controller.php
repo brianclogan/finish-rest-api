@@ -116,7 +116,7 @@ class WP_REST_Plugins_Controller extends WP_REST_Controller {
             $plugin = [];
             $plug = array_merge([
                 'file' => $file,
-                'slug' => explode($file, '/')[0]
+                'slug' => explode('/', $file)[0]
             ], $info);
             foreach($plug AS $item=> $value) {
                 $plugin[FinishRestApi::toSnakeCase($item)] = $value;
