@@ -68,9 +68,24 @@ File: `class-wp-rest-themes-controller.php`
 | `api/v1/themes` | `GET` | `get_themes()` | `WP_REST_Response\|WP_Error` |
 | `api/v1/themes` | `POST` | `install_themes()` | `WP_REST_Response\|WP_Error` |
 | `api/v1/themes/{theme}` | `GET` | `get_theme()` | `WP_REST_Response\|WP_Error` |
-| `api/v1/themes/activate` | `POST` | `activate_theme()` | `WP_REST_Response\|WP_Error` |
-| `api/v1/themes/deactivate` | `POST` | `deactivate_theme()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/themes/switch` | `POST` | `switch_theme()` | `WP_REST_Response\|WP_Error` |
 | `api/v1/themes/delete` | `DELETE` | `delete_theme()` | `WP_REST_Response\|WP_Error` |
+
+#### Core
+
+File: `class-wp-rest-core-controller.php`
+
+##### Parameters
+| Parameter | Usage | Example |
+|--|--|--|
+|  |  |  |
+
+##### Routes
+
+| Endpoint | Method | Function | Result |
+|--|--|--|-|
+| `api/v1/core` | `GET` | `get_core()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/core/update` | `POST` | `update_core()` | `WP_REST_Response\|WP_Error` |
 
 
 ____
