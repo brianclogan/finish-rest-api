@@ -19,6 +19,8 @@ That's where we came in, we decided to take what WordPress had, standardize it, 
 
 We are following the WP REST files as closely as possible, so moving them into WordPress Core can be easy down the road.
 
+FULL API DOCUMENTATION: http://bit.ly/2BHcgzS
+---
 
 #### Development
 
