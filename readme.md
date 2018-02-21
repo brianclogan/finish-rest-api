@@ -32,16 +32,16 @@ ___
 ## Version 1
 Files for Version 1 are in `/routes/v1/`.
 
-#### Plugins
+### Plugins
 
 File: `class-wp-rest-plugins-controller.php`
 
-##### Parameters
+#### Parameters
 | Parameter | Usage | Example |
 |--|--|--|
 | `slug` | Used to look up the plugin. Can be either the full file path, or the slug. | `akismet` or `akismet/akismet.php` |
 
-##### Routes
+#### Routes
 
 | Endpoint | Method | Function | Result |
 |--|--|--|-|
@@ -52,16 +52,16 @@ File: `class-wp-rest-plugins-controller.php`
 | `api/v1/plugins/deactivate` | `POST` | `deactivate_plugin()` | `WP_REST_Response\|WP_Error` |
 | `api/v1/plugins/delete` | `DELETE` | `delete_plugin()` | `WP_REST_Response\|WP_Error` |
 
-#### Themes
+### Themes
 
 File: `class-wp-rest-themes-controller.php`
 
-##### Parameters
+#### Parameters
 | Parameter | Usage | Example |
 |--|--|--|
 | `theme` | Used to look up the theme. It is the folder the theme is in. | `twentyseventeen` |
 
-##### Routes
+#### Routes
 
 | Endpoint | Method | Function | Result |
 |--|--|--|-|
@@ -71,16 +71,16 @@ File: `class-wp-rest-themes-controller.php`
 | `api/v1/themes/switch` | `POST` | `switch_theme()` | `WP_REST_Response\|WP_Error` |
 | `api/v1/themes/delete` | `DELETE` | `delete_theme()` | `WP_REST_Response\|WP_Error` |
 
-#### Core
+### Core
 
 File: `class-wp-rest-core-controller.php`
 
-##### Parameters
+#### Parameters
 | Parameter | Usage | Example |
 |--|--|--|
 |  |  |  |
 
-##### Routes
+#### Routes
 
 | Endpoint | Method | Function | Result |
 |--|--|--|-|
