@@ -100,7 +100,7 @@ function register_finish_api_routes()
 }
 
 
-if(WP_DEBUG) {
+if(FINSIH_REST_API_BASIC_AUTH) {
     function json_basic_auth_handler( $user ) {
         global $wp_json_basic_auth_error;
         $wp_json_basic_auth_error = null;

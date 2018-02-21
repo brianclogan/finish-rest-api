@@ -20,6 +20,15 @@ That's where we came in, we decided to take what WordPress had, standardize it, 
 We are following the WP REST files as closely as possible, so moving them into WordPress Core can be easy down the road.
 
 
+#### Development
+
+If you are helping with development, you can add `FINSIH_REST_API_BASIC_AUTH` to the `wp-config.php` file using `define()`, and get basic authentication enabled on the site.
+
+Just add `define('FINSIH_REST_API_BASIC_AUTH', true);` to the `wp-config.php` file.
+
+
+___
+
 ## Version 1
 Files for Version 1 are in `/routes/v1/`.
 
