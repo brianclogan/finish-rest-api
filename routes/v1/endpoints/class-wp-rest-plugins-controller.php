@@ -167,7 +167,13 @@ class WP_REST_Plugins_Controller extends WP_REST_Controller {
      * @return Exception|WP_Error|WP_REST_Response
      */
     public function install_plugin(WP_REST_Request $request) {
+
+        if(!function_exists('plugins_api')) {
+            require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+        }
+
         $plugin = $request->get_param('slug');
+
         $api = plugins_api( 'plugin_information', array(
             'slug' => $plugin,
             'fields' => array(
@@ -185,11 +191,15 @@ class WP_REST_Plugins_Controller extends WP_REST_Controller {
                 'donate_link' => false,
             ),
         ) );
+
         if(is_wp_error($api)) {
             return FinishRestApi_Response::error('plugin-not-found', 'The plugin was not found in the WordPress repository.', ['plugin' => $plugin]);
         }
+
         $upgrader = new Plugin_Upgrader( new FinishRestApi_Skin() );
+
         $install = $upgrader->install($api->download_link);
+
         if($install) {
             return FinishRestApi_Response::respond([
                 'plugin' => $plugin,

@@ -6,8 +6,10 @@
 
 require_once 'endpoints/class-wp-rest-plugins-controller.php';
 require_once 'endpoints/class-wp-rest-themes-controller.php';
+require_once 'endpoints/class-wp-rest-core-controller.php';
 require_once 'fields/class-wp-rest-plugin-meta-fields.php';
 require_once 'fields/class-wp-rest-theme-meta-fields.php';
+require_once 'fields/class-wp-rest-core-meta-fields.php';
 
 
 class Version1 {
@@ -23,5 +25,6 @@ class Version1 {
     public static function register_routes() {
         (new WP_REST_Plugins_Controller())->register_routes();
         (new WP_REST_Themes_Controller())->register_routes();
+        (new WP_REST_Core_Controller())->register_routes();
     }
 }

@@ -35,9 +35,7 @@ define( 'FINISH_REST_API_VERSION', '1.0.0' );
 /**
  * Require the core files required
  */
-require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
 require_once ABSPATH . 'wp-includes/rest-api/endpoints/class-wp-rest-controller.php';
-include_once ABSPATH . 'wp-admin/includes/theme-install.php';
 
 /**
  * Require the base files for all versions

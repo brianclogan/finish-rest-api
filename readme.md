@@ -52,6 +52,26 @@ File: `class-wp-rest-plugins-controller.php`
 | `api/v1/plugins/deactivate` | `POST` | `deactivate_plugin()` | `WP_REST_Response\|WP_Error` |
 | `api/v1/plugins/delete` | `DELETE` | `delete_plugin()` | `WP_REST_Response\|WP_Error` |
 
+#### Themes
+
+File: `class-wp-rest-themes-controller.php`
+
+##### Parameters
+| Parameter | Usage | Example |
+|--|--|--|
+| `theme` | Used to look up the theme. It is the folder the theme is in. | `twentyseventeen` |
+
+##### Routes
+
+| Endpoint | Method | Function | Result |
+|--|--|--|-|
+| `api/v1/themes` | `GET` | `get_themes()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/themes` | `POST` | `install_themes()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/themes/{theme}` | `GET` | `get_theme()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/themes/activate` | `POST` | `activate_theme()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/themes/deactivate` | `POST` | `deactivate_theme()` | `WP_REST_Response\|WP_Error` |
+| `api/v1/themes/delete` | `DELETE` | `delete_theme()` | `WP_REST_Response\|WP_Error` |
+
 
 ____
 
