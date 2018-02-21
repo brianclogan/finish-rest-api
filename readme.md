@@ -88,6 +88,84 @@ File: `class-wp-rest-core-controller.php`
 | `api/v1/core/update` | `POST` | `update_core()` | `WP_REST_Response\|WP_Error` |
 
 
+### Examples
+
+Most responses from the API are structured in a way to make it so you never have to guess.
+
+Request:
+```
+https://example.com/wp-json/api/v1/plugins
+```
+
+Response:
+```json
+{
+    "success": true,
+    "total_records": 2,
+    "data": [
+        {
+            "file": "akismet/akismet.php",
+            "slug": "/",
+            "name": "Akismet Anti-Spam",
+            "plugin_uri": "https://akismet.com/",
+            "version": "4.0.3",
+            "description": "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key.",
+            "author": "Automattic",
+            "author_uri": "https://automattic.com/wordpress-plugins/",
+            "text_domain": "akismet",
+            "domain_path": "",
+            "network": false,
+            "title": "Akismet Anti-Spam",
+            "author_name": "Automattic"
+        },
+        {
+            "file": "finish-rest-api/finish-rest-api.php",
+            "slug": "/",
+            "name": "Finish Rest API",
+            "plugin_uri": "https://twitter.com/darkgoldblade",
+            "version": "1.0.0",
+            "description": "A plugin that adds the rest of the functionality we want from the REST API.",
+            "author": "darkgoldblade",
+            "author_uri": "https://twitter.com/darkgoldblade",
+            "text_domain": "darkgoldblade",
+            "domain_path": "/languages",
+            "network": false,
+            "title": "Finish Rest API",
+            "author_name": "darkgoldblade"
+        }
+    ]
+}
+```
+
+Request:
+```
+https://example.com/wp-json/api/v1/plugins/akismet
+```
+
+Response:
+```json
+{
+    "success": true,
+    "total_records": 1,
+    "data": {
+        "file": "akismet/akismet.php",
+        "name": "Akismet Anti-Spam",
+        "plugin_uri": "https://akismet.com/",
+        "version": "4.0.3",
+        "description": "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key.",
+        "author": "Automattic",
+        "author_uri": "https://automattic.com/wordpress-plugins/",
+        "text_domain": "akismet",
+        "domain_path": "",
+        "network": false,
+        "title": "Akismet Anti-Spam",
+        "author_name": "Automattic"
+    }
+}
+```
+
+Any upgrades/updates will also return the same array, but in the `data` object, it will have a `updated` key, with a `bool` as the result.
+
 ____
 
 
